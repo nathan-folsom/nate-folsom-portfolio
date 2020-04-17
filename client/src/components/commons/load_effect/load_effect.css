@@ -1,0 +1,31 @@
+.fade-in {
+    transition: opacity .7s ease;
+}
+
+#effect-container {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    color: #fff;
+    overflow:hidden;
+    position: absolute;
+    background: black;
+    top: 0;
+    left: 0;
+    transition: all .2s ease;
+    z-index: 0;
+}
+.cell {
+    border: #000000 1px solid;
+    background-color: #fff;
+    opacity:0;
+    height: 0;
+    animation: illuminate .5s ease-out forwards;
+}
+@keyframes illuminate {
+    50% {opacity:1;}
+    100% {opacity:1;
+        border-color: #fff;}
+}

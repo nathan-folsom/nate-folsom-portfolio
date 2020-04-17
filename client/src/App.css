@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+html {
+  background: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  /*background: white;*/
+  background: black;
+  font-family: 'Roboto Mono', monospace !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  margin: 0;
+  font-size: 12px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  height: 100vh;
+}
+.col {
+  max-height: 1000px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.row {
+  width: 100%;
+}
+.inline {
+  display: inline-flex;
+}
+#body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+#case-studies {
+  justify-content: space-around;
+  margin: 50px -20px;
+  width: calc(100% + 40px);
+}
+.case-study {
+  flex: 1 1 auto;
+  width: 50%;
   color: white;
+  margin: 20px;
+}
+.cs-show {
+  background: saddlebrown;
+  height: 100%;
+  z-index: 2;
+  border-bottom: 5px black solid;
+  margin-bottom: -10px;
+}
+.cs-hide {
+  background: black;
+  color: black;
+
+}
+.cs-show, .cs-hide {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.case-study p {
+  margin-bottom: 5px;
+}
+#left {
+  height: 100%;
+  background-image: url("./content/img/biopic_code.png");
+  background-size: cover;
+  background-position: center;
+}
+#right {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and(max-width: 768px) {
+  #right {
+    overflow: visible;
   }
-  to {
-    transform: rotate(360deg);
+  #left {
+    background-position-y: -30vw;
+    height: 20%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #nav h1 {
+    font-size: 1.5rem;
+  }
+  #nav {
+    min-height: 32px;
   }
 }
