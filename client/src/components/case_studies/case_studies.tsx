@@ -1,5 +1,6 @@
 import React, { ReactChild } from 'react';
 import { Accordion, useAccordionToggle } from 'react-bootstrap';
+import './case_studies.css';
 
 const caseStudies = [{
         id: 0,
@@ -33,7 +34,7 @@ function CustomToggle(props: {children: ReactChild[], eventKey: string}) {
 function CaseStudyComponent(props: any) {
     const cs = caseStudies[props.id];
     return (
-      <div className={"col-12 col-md-6"}>
+      <div className={"col-12 col-md-6 mt-4"}>
       <Accordion>
               <CustomToggle eventKey={props.id}>
                       <h2>{cs.title}</h2>

@@ -1,0 +1,22 @@
+#left {
+    height: 100%;
+    background-image: url("../../content/img/biopic_code.png");
+    background-size: cover;
+    background-position: center;
+}
+#right {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+@media only screen and (max-width: 767px) {
+    #right {
+        overflow: visible;
+    }
+    #left {
+        background-position-y: -30vw;
+        height: 20%;
+    }
+}

@@ -1,0 +1,34 @@
+#case-studies {
+    justify-content: space-around;
+    margin: 0 -20px 30px;
+    width: calc(100% + 40px);
+}
+.case-study {
+    flex: 1 1 auto;
+    width: 50%;
+    color: white;
+    margin: 20px;
+}
+.cs-show {
+    background: saddlebrown;
+    height: 100%;
+    z-index: 2;
+    border-bottom: 5px black solid;
+    margin-bottom: -10px;
+}
+.cs-hide {
+    background: black;
+    color: black;
+
+}
+.cs-show, .cs-hide {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.case-study p {
+    margin-bottom: 5px;
+}

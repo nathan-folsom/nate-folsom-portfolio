@@ -3,6 +3,7 @@ import Footer from "../commons/footer/footer";
 import LoadEffect from "../commons/load_effect/load_effect.tsx";
 import Header from "../commons/header/header";
 import CaseStudies from "../case_studies/case_studies.tsx";
+import './home.css';
 
 function Home(){
     const [ bio, setbio ] = useState('');
