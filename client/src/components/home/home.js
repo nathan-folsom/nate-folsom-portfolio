@@ -7,7 +7,7 @@ import CaseStudies from "../case_studies/case_studies.tsx";
 function Home(){
     const [ bio, setbio ] = useState('');
     useEffect(() => {
-        fetch('../../content/bio.txt')
+        fetch(process.env.PUBLIC_URL + '/bio.txt')
             .then((response) => {
                 return response.text();
             })
