@@ -24,15 +24,18 @@ class CellEffect {
     private readonly animDuration: number;
 
     constructor(width: number, height: number, columns: number, duration: number) {
+        if ( width < height ) {
+            this.numColumns = 2;
+        }
+        else {
+            this.numColumns = columns;
+        }
         this.width = width;
         this.height = height;
-        this.numColumns = columns;
         this.animDuration = duration;
     }
 
-
-
-    private squareDim = () => this.width/this.numColumns - 2;
+    private squareDim = () => (this.width - 2)/this.numColumns;
     private numRows = () => Math.ceil(this.height / (this.squareDim() + 2));
     private delayCoefficient = () => this.animDuration / (this.numColumns * this.numRows());
     private delay = () => Math.ceil(Math.random() * this.numRows() * this.numColumns) * this.delayCoefficient();

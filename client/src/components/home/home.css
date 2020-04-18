@@ -15,6 +15,7 @@
 @media only screen and (max-width: 767px) {
     #right {
         overflow: visible;
+        max-height: none;
     }
     #left {
         background-position-y: -30vw;

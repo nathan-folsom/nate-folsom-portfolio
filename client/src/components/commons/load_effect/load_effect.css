@@ -10,7 +10,7 @@
     align-content: flex-start;
     color: #fff;
     overflow:hidden;
-    position: absolute;
+    position: fixed;
     background: black;
     top: 0;
     left: 0;
