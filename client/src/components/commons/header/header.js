@@ -4,7 +4,7 @@ import './header.css';
 
 function Header() {
     return (
-          <Navbar className={"mt-2 px-0"} expand={"md"}>
+          <Navbar className={"mt-2 px-0"} expand={"lg"}>
             <Navbar.Brand>Nate Folsom</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav"/>
             <Navbar.Collapse id="navbar-nav">

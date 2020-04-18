@@ -1,14 +1,17 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
 body {
-  /*width: 100vw;*/
-  /*min-height: 100vh;*/
-  /*height: 100%;*/
-  /*margin: 0;*/
-  /*background: white;*/
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: black;
   font-family: 'Roboto Mono', monospace !important;
 }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
 p {
-  margin: 0;
   font-size: 12px;
 }
 img {
@@ -32,13 +35,8 @@ img {
   z-index: 1;
 }
 
-
-
-@media only screen and (max-width: 400px) {
-  #nav h1 {
-    font-size: 1.5rem;
-  }
-  #nav {
-    min-height: 32px;
+@include media-breakpoint-down(sm) {
+  h2 {
+    font-size: 28px;
   }
 }

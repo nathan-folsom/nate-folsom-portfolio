@@ -24,8 +24,11 @@ class CellEffect {
     private readonly animDuration: number;
 
     constructor(width: number, height: number, columns: number, duration: number) {
-        if ( width < height ) {
+        if ( width < height && width < 500) {
             this.numColumns = 2;
+        }
+        else if ( width < height && width >= 500 && width <= 900) {
+            this.numColumns = 3;
         }
         else {
             this.numColumns = columns;
