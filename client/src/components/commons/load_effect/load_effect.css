@@ -3,19 +3,25 @@
 }
 
 #effect-container {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: inline-flex;
     flex-wrap: wrap;
     align-content: flex-start;
     color: #fff;
     overflow:hidden;
     position: fixed;
-    background: black;
     top: 0;
     left: 0;
     transition: all .2s ease;
     z-index: 0;
+}
+.transition-bg {
+    background: white;
+}
+.exit #effect-container {
+    transition: none;
+    opacity: 0;
 }
 .cell {
     border: #000000 1px solid;

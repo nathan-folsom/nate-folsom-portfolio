@@ -1,8 +1,13 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function Metachi() {
     return (
-        <div>Metachi</div>
+        <div>
+            <p className="text-white">Metachi</p>
+            <Link to='/'>Back</Link>
+        </div>
+
     )
 }
 

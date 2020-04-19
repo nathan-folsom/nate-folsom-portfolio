@@ -8,17 +8,62 @@
     position: relative;
     overflow-x: hidden;
     overflow-y: scroll;
-    max-height: 100vh;
+    height: 100vh;
     background: white;
+}
+.exit #right {
+    right: 0;
+    opacity: 1;
+    position: absolute;
+    transition: all .4s cubic-bezier(.9,0,.61,.61);
+}
+.exit-active #right {
+    right: -59%;
+    opacity: 0;
+}
+.exit #left {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    transition: all .4s cubic-bezier(.9,0,.61,.61);
+}
+.exit-active #left {
+    left: -31%;
+    opacity: 0;
+}
+.exit #body {
+    overflow: hidden;
+}
+#body {
+    max-height: 100vh;
 }
 
 @media only screen and (max-width: 767px) {
     #right {
         overflow: visible;
         max-height: none;
+        height: auto;
     }
     #left {
         background-position-y: -30vw;
         height: 20%;
+    }
+    #body {
+        overflow: scroll;
+        position: fixed;
+    }
+    .exit #right {
+        right: auto;
+        position: relative;
+    }
+    .exit-active #right {
+        right: auto;
+    }
+    .exit #left {
+        left: auto;
+        position: relative;
+    }
+    .exit-active #left {
+        left: auto;
     }
 }

@@ -56,7 +56,7 @@ function CaseStudyComponent(props: any) {
     )
 }
 
-function CaseStudies() {
+function CaseStudies(props: any) {
     return (
         <Accordion>
             <div id="case-studies" className="row" style={{flex: '0 1 auto'}}>

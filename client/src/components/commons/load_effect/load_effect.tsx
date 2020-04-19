@@ -59,11 +59,11 @@ function LoadEffect(props: PropsWithChildren<ReactNode>) {
     const [width, setWidth] = useState(0);
     const [cells, setCells] = useState(['']);
     const [dim, setDim] = useState('');
-    const [containerBg, setContainerBg] = useState('black');
+    const [containerClass, setContainerClass] = useState('');
     const [fadeIn, setFadein] = useState('0');
 
     useEffect(() => {
-        setContainerBg('white');
+        setContainerClass('transition-bg');
         setFadein('1');
         const Effect = new CellEffect(width, height, 5, animationDuration);
         setDim(Effect.getSquareDim);
@@ -79,7 +79,7 @@ function LoadEffect(props: PropsWithChildren<ReactNode>) {
 
     return (
         <div>
-            <div ref={containerRef} id={"effect-container"} style={{transitionDelay: animationDuration + 's', background: containerBg}}>
+            <div ref={containerRef} id={"effect-container"} style={{transitionDelay: animationDuration + 's'}} className={containerClass}>
                 {cells.map((d, index) => <Cell key={index} dim={dim} animationDelay={d}/>)}
             </div>
             <div className={'fade-in'} style={{transitionDelay: animationDuration + 's', opacity: fadeIn}}>
