@@ -25,7 +25,7 @@ class Home extends Component {
             <div id="body" className="row mx-0">
                 <div id="left" className="col-12 col-md-5 px-0">
                 </div>
-                <div id="right" className="col-12 col-md-7 d-flex flex-column px-5">
+                <div id="right" className="col-12 col-md-7 d-flex flex-column px-3 px-md-5">
                     <Header/>
                     <p id="bio" className={'pt-4'}>{this.state.bio}</p>
                     <CaseStudies/>
