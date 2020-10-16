@@ -8,3 +8,15 @@
 #case-study {
     min-height: 100vh;
 }
+.tab-1 {
+    margin-left: 20px;
+}
+.tab-2 {
+    margin-left: 40px;
+}
+.tab-3 {
+    margin-left: 60px;
+}
+.tab-4 {
+    margin-left: 80px;
+}

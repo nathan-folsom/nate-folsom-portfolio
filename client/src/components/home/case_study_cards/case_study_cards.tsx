@@ -40,7 +40,7 @@ function CaseStudyComponent(props: any) {
             </CustomToggle>
             <Accordion.Collapse eventKey={props.id}>
                 <div className="cs-hide text-white">
-                    <p>{cs.description}</p>
+                    {/*<p>{cs.description}</p>*/}
                     <Link to={cs.url}>Show me some code!</Link>
                 </div>
             </Accordion.Collapse>

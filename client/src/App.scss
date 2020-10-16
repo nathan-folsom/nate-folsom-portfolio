@@ -40,6 +40,10 @@ img {
   z-index: 1;
 }
 
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+
 @include media-breakpoint-down(sm) {
   h2 {
     font-size: 28px;
