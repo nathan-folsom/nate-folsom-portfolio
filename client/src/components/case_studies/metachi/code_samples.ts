@@ -127,15 +127,11 @@ export const codeSamples = {
                 '})<br>' +
                 'export class ExampleComponent implements OnInit {<br>' +
                 '<div class="tab-1">uiState = UiState;<br></div>' +
-                '<div class="tab-1">currentState$: Observable<UiState>;<br></div>' +
+                '<div class="tab-1">currentState$: Observable&lt;UiState&gt;;<br></div>' +
                 '<br>' +
                 '<div class="tab-1">constructor(private stateService: PageStateFromUrlService) { }<br></div>' +
                 '<br>' +
                 '<div class="tab-1">ngOnInit() {<br></div>' +
-                '<div class="tab-2">this.handleUrl();<br></div>' +
-                '<div class="tab-1">}<br></div>' +
-                '<br>' +
-                '<div class="tab-1">handleUrl = () => {<br></div>' +
                 '<div class="tab-2">this.currentState$ = this.stateService.register(<br></div>' +
                 '<div class="tab-3">\'example\',<br></div>' +
                 '<div class="tab-3">UiState.DEFAULT, [<br></div>' +
@@ -143,7 +139,8 @@ export const codeSamples = {
                 '<div class="tab-4">{matcher: [\'route\', \'*\'], cb: () => UiState.STATE2},<br></div>' +
                 '<div class="tab-3">], [<br></div>' +
                 '<div class="tab-4">this.statelessEffect,<br></div>' +
-                '<div class="tab-3">]);<br></div>' +
+                '<div class="tab-3">]<br></div>' +
+                '<div class="tab-2">);<br></div>' +
                 '<div class="tab-1">}<br></div>' +
                 '<br>' +
                 '<div class="tab-1">statefulEffect = (urls: string[]) => {<br></div>' +
