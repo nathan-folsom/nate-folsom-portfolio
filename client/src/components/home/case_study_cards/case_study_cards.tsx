@@ -1,6 +1,6 @@
 import React, {ReactChild} from 'react';
 import {Accordion, useAccordionToggle} from 'react-bootstrap';
-import './case_studies.css';
+import './case_study_cards.css';
 import {Link} from "react-router-dom";
 
 const caseStudies = [
@@ -8,17 +8,9 @@ const caseStudies = [
         id: 0,
         title: "Metachi",
         url: "/metachi",
-        technologies: "Angular, NgRx, TypeScript, HTML, CSS",
-        position: "Front-end Developer",
-        description: "As a front end developer, I help style components based on designs provided by the design team. I also create new components and hook them up to existing apis"
-    },
-    {
-        id: 1,
-        title: "Showposter",
-        url: "/showposter",
-        technologies: "React, JavaScript, HTML, CSS",
-        position: "Front-end Developer, Designer",
-        description: "I am designing and implementing a user interface for this software as a service web application."
+        technologies: "Angular, NgRx, TypeScript, HTML, CSS, Java, Spring",
+        position: "Full Stack Developer",
+        description: "Although my focus is primarily on front-end, I contribute to the whole stack of the web application. I do everything from small bug fixes to implementing new features and APIs."
     }
 ];
 
@@ -40,7 +32,7 @@ function CustomToggle(props: { children: ReactChild[], eventKey: string }) {
 function CaseStudyComponent(props: any) {
     const cs = caseStudies[props.id];
     return (
-        <div className={"col-12 col-xl-6 mt-4"}>
+        <div className={"col-12 mt-4"}>
             <CustomToggle eventKey={props.id}>
                 <h2>{cs.title}</h2>
                 <p>{cs.position}</p>

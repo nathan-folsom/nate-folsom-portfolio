@@ -19,7 +19,7 @@
 }
 .exit-active #right {
     right: -59%;
-    opacity: 0;
+    opacity: .2;
 }
 .exit #left {
     position: absolute;
@@ -29,7 +29,7 @@
 }
 .exit-active #left {
     left: -31%;
-    opacity: 0;
+    opacity: .2;
 }
 .exit #body {
     overflow: hidden;

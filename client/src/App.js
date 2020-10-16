@@ -2,8 +2,8 @@ import React from 'react';
 import './App.scss';
 import Home from './components/home/home';
 import {BrowserRouter, Route} from "react-router-dom";
-import Metachi from "./components/metachi/metachi";
-import Showposter from "./components/showposter/showposter";
+import Metachi from "./components/case_studies/metachi/metachi";
+import Showposter from "./components/case_studies/showposter/showposter";
 import {CSSTransition} from "react-transition-group";
 
 const routes = [
@@ -13,7 +13,6 @@ const routes = [
 ];
 
 function App() {
-
     return (
         <BrowserRouter>
             <div>
