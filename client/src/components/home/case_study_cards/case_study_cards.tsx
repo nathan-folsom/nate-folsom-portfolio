@@ -32,7 +32,7 @@ function CustomToggle(props: { children: ReactChild[], eventKey: string }) {
 function CaseStudyComponent(props: any) {
     const cs = caseStudies[props.id];
     return (
-        <div className={"col-12 mt-4"}>
+        <div className={"col-12 mb-4"}>
             <CustomToggle eventKey={props.id}>
                 <h2>{cs.title}</h2>
                 <p>{cs.position}</p>
@@ -51,7 +51,7 @@ function CaseStudyComponent(props: any) {
 function CaseStudies(props: any) {
     return (
         <Accordion>
-            <div id="case-studies" className="row" style={{flex: '0 1 auto'}}>
+            <div id="case-studies" className="row no-gutters" style={{flex: '0 1 auto'}}>
                 {caseStudies.map((c) => <CaseStudyComponent key={c.id} id={c.id}/>)}
             </div>
         </Accordion>

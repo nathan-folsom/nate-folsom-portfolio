@@ -1,7 +1,6 @@
 #case-studies {
     justify-content: space-around;
-    margin: 0 -20px 30px;
-    width: calc(100% + 40px);
+    width: 100%;
 }
 .case-study {
     flex: 1 1 auto;
