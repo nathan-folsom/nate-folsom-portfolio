@@ -28,6 +28,7 @@ class Home extends Component {
                 <div id="right" className="col-12 col-md-7 d-flex flex-column px-3 px-md-5">
                     <Header/>
                     <p id="bio" className={'pt-4'}>{this.state.bio}</p>
+                    <h4>Experience</h4>
                     <CaseStudies/>
                     <div style={{flex: '1 1 auto'}}/>
                     <Footer/>

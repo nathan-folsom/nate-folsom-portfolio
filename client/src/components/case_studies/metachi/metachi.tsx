@@ -1,15 +1,26 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Footer from "../../commons/footer/footer";
 import '../case_studies.css';
 import CaseStudyHeader from "../case_study_header/case_study_header";
 import {Tab, Tabs} from "react-bootstrap";
-import {codeSamples} from "./code_samples";
+import {textToHtml} from "../../../utils";
 
 function Metachi() {
+    const [text, setText] = useState({service: {__html: ''}, class: {__html: ''}, usage: {__html: ''}});
+    useEffect(() => {
+        fetch('./case_study_content/metachi.json')
+            .then(r => {
+                return r.json();
+            })
+            .then(t => {
+                setText({class: {__html: textToHtml(t.class)}, service: {__html: textToHtml(t.service)}, usage: {__html: textToHtml(t.usage)}});
+            });
+    }, []);
+
     return (
         <div id={"case-study"} className="container-fluid d-flex flex-column px-2 px-md-5">
             <CaseStudyHeader title={"Metachi"}/>
-            <div className="row mx-0">
+            <div className="row mx-0 mt-3">
                 <div className="col-12 col-md-6">
                     <p className="text-light">Metachi is a SaaS project management and data analytics web
                         application. Being a part of a startup environment that is bringing the future of remote
@@ -43,7 +54,7 @@ function Metachi() {
                                 it would be very easy to extract the functionality provided to a non-Angular
                                 setting.</p>
                             <p className="text-light bg-dark p-2 rounded-lg overflow-x-scroll text-nowrap"
-                               dangerouslySetInnerHTML={codeSamples.pageStateService[0]}/>
+                               dangerouslySetInnerHTML={text.service}/>
                         </Tab>
                         <Tab title="UrlHandler" eventKey="urlhandler">
                             <p className="text-light mt-3">This class is the workhorse of the service. It provides all
@@ -54,17 +65,18 @@ function Metachi() {
                                 the first matching stateful callback that is found, so wildcard matchers are handled
                                 last.</p>
                             <p className="text-light bg-dark p-2 rounded-lg overflow-x-scroll text-nowrap"
-                               dangerouslySetInnerHTML={codeSamples.pageStateService[1]}/>
+                               dangerouslySetInnerHTML={text.class}/>
                         </Tab>
                         <Tab title="Usage" eventKey="usage">
                             <p className="text-light mt-3">By tying the page state to a standardized object, it becomes
                                 much easier to conditionally render html or other subcomponents, especially as a feature
                                 becomes more complex. The implications for improving user experience are great, as
                                 users can navigate easily within components by using the built in back/forward
-                                functionality of the browser. This is especially relevant for mobile users who are used to swiping back
+                                functionality of the browser. This is especially relevant for mobile users who are used
+                                to swiping back
                                 and forth to navigate web pages.</p>
                             <p className="text-light bg-dark p-2 rounded-lg overflow-x-scroll text-nowrap"
-                               dangerouslySetInnerHTML={codeSamples.pageStateService[2]}/>
+                               dangerouslySetInnerHTML={text.usage}/>
                         </Tab>
                         {/*<Tab title="Test" eventKey="test">*/}
                         {/*    <p className="text-light">Unit testing for service</p>*/}
