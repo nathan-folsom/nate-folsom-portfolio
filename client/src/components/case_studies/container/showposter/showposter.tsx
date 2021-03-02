@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import Footer from "../../commons/footer/footer";
-import '../case_studies.css';
+import Footer from "../../../commons/footer/footer";
+import '../../presentational/case_studies.css';
 
 function Showposter() {
     return (
