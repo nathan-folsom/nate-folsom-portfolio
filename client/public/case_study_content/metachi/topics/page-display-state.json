@@ -1,5 +1,5 @@
 {
-  "title": "Typescript Ui Logic: Page Display State Service",
+  "title": "Page Display State Service",
   "description": "During the process of building a new feature, I realized that I needed a more well tailored approach to parsing the url and using that to drive the appearance of the page. In order to do this, I created an Angular service that would use a set of callback functions to perform some side effects and return an object representing the page state. The service pipes an observable originating from the router service through the callback functions before returning it for the component to subscribe to.",
   "tabs": [
     {
