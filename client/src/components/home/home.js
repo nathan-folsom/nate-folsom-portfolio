@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Footer from '../commons/footer/footer';
 import Header from '../commons/header/header';
-import CaseStudies from './case_study_cards/case_study_cards.tsx';
+import CaseStudyCards from './case_study_cards/case_study_cards.tsx';
 import './home.css';
 
 class Home extends Component {
@@ -29,7 +29,7 @@ class Home extends Component {
                     <Header/>
                     <p id="bio" className={'pt-4'}>{this.state.bio}</p>
                     <h4>Experience</h4>
-                    <CaseStudies/>
+                    <CaseStudyCards/>
                     <div style={{flex: '1 1 auto'}}/>
                     <Footer/>
                 </div>
