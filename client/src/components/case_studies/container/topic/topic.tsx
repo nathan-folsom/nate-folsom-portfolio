@@ -24,7 +24,7 @@ export function Topic() {
     }, [topic, url]);
 
     const render = () => (
-        <div className="container-fluid d-flex flex-column px-2 px-md-5">
+        <div className="container d-flex flex-column px-2 px-md-5">
             <CaseStudyHeader title={data.title} prev={`${getUrl(url)}`}/>
             <div className="row mx-0 mt-3">
                 <div className="col-12">

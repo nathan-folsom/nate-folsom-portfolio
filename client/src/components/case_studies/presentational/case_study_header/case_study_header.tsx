@@ -26,7 +26,7 @@ function CaseStudyHeader({title, prev}: HeaderProps) {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-            <Breadcrumb>
+            <Breadcrumb className="mx-3">
                 <Breadcrumb.Item href={"/"}>Home</Breadcrumb.Item>
                 {prev && <Breadcrumb.Item href={`/${prev}`}>{capitalize}</Breadcrumb.Item>}
                 <Breadcrumb.Item active>{title}</Breadcrumb.Item>
