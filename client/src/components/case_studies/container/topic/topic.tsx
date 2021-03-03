@@ -25,7 +25,7 @@ export function Topic() {
 
     const render = () => (
         <div className="container-fluid d-flex flex-column px-2 px-md-5">
-            <CaseStudyHeader title={data.title}/>
+            <CaseStudyHeader title={data.title} prev="./"/>
             <div className="row mx-0 mt-3">
                 <div className="col-12">
                     <p className="text-light">{data.description}</p>

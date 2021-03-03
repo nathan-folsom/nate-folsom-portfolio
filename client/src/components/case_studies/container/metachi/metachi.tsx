@@ -5,7 +5,7 @@ import {CaseStudy} from "../../presentational/case-study";
 function Metachi() {
     const [data, setData] = useState({title: '', description: '', topics: []});
     useEffect(() => {
-        fetch('./case_study_content/metachi/metachi.json')
+        fetch('/case_study_content/metachi/metachi.json')
             .then(r => {
                 return r.json();
             })
@@ -14,7 +14,7 @@ function Metachi() {
             });
     }, []);
 
-    return <CaseStudy title={data.title} description={data.description} topics={data.topics}/>
+    return <CaseStudy title={data.title} description={data.description} topics={data.topics} url="metachi"/>
 }
 
 export default Metachi;

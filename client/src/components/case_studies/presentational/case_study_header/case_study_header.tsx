@@ -4,14 +4,15 @@ import {Link} from "react-router-dom";
 import './case_study_header.css';
 
 type headerProps = {
-    title: string
+    title: string;
+    prev: string;
 }
 
-function CaseStudyHeader(props: headerProps) {
+function CaseStudyHeader({title, prev}: headerProps) {
     return (
         <Navbar variant="dark" className={"mt-2 cs-nav"} expand={"md"}>
-            <Link to={'/'} className={"mr-3 mr-md-5"}>Back</Link>
-            <Navbar.Brand className="text-white ml-md-5">{props.title}</Navbar.Brand>
+            <Link to={prev} className={"mr-3 mr-md-5"}>Back</Link>
+            <Navbar.Brand className="text-white ml-md-5">{title}</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbar-nav"/>
             <Navbar.Collapse id="navbar-nav">
                 <Nav className={"row justify-content-end mx-0"}>
