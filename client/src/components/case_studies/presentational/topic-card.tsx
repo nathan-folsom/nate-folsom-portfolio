@@ -9,7 +9,7 @@ export interface TopicCardProps {
 export function TopicCard({title, url, subtitle}: TopicCardProps) {
     const render = () => (
         <div className="col-12 bg-light py-3 rounded-lg mt-3">
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             <p>{subtitle}</p>
             <Link to={url}>View</Link>
         </div>

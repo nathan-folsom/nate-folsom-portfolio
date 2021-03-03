@@ -13,7 +13,7 @@ export interface CaseStudyProps {
 export function CaseStudy({description, title, topics, url}: CaseStudyProps) {
     const render = () => (
         <div id={"case-study"} className="container-fluid d-flex flex-column px-2 px-md-5">
-            <CaseStudyHeader title={title} prev="/"/>
+            <CaseStudyHeader title={title}/>
             <div className="row mx-0 mt-3">
                 <div className="col-12">
                     <p className="text-light">{description}</p>
