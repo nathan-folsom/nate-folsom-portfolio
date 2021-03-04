@@ -37,6 +37,10 @@ img {
   z-index: 1;
 }
 
+.full-height {
+  min-height: 100vh;
+}
+
 .overflow-x-scroll {
   overflow-x: scroll;
 }

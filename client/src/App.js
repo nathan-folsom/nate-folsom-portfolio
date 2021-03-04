@@ -5,11 +5,13 @@ import {BrowserRouter, Route} from "react-router-dom";
 import Metachi from "./components/case_studies/container/metachi/metachi";
 import {CSSTransition} from "react-transition-group";
 import {Topic} from './components/case_studies/container/topic/topic';
+import {About} from './components/about/about';
 
 const routes = [
     { path: '/', name: 'home', Component: Home},
     { path: '/metachi', name: 'metachi', Component: Metachi},
     { path: '/metachi/:topic', name: 'metachi', Child: Topic},
+    { path: '/about', name: 'about', Component: About}
 ];
 
 function App() {
