@@ -39,7 +39,7 @@ export function About() {
                                     opportunity.<br/><br/>So what about society then? I think I’ve boiled things down to a nice sentence:
                                     Technology is equally capable of lifting people up as it is at lifting stock prices.
                                     This is not to say that larger tech companies are inherently bad, but rather that we
-                                    have the opportunity to solve a host of new and exciting problems to affect positive
+                                    have the opportunity to solve a host of new and exciting problems to effect positive
                                     change in the world. Business may be business, but those who can turn a profit while
                                     helping people are of the future, while those who profit at others’ expense are of
                                     the past.
