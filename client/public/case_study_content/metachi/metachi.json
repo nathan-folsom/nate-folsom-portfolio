@@ -1,6 +1,6 @@
 {
   "title": "Metachi",
-  "description": "Metachi is a SaaS project management and data analytics web application. Being a part of a startup environment that is bringing the future of remote work is an exciting opportunity. My work focuses on building a robust, cross-browser, mobile friendly application with concise data visualization and an optimized user experience. Front end work includes writing and testing Angular components in TypeScript, in addition to writing HTML and CSS. I do anything from small bugfixes to building entire features. Backend work is more limited, usually bugfixing or writing and testing an endpoint.",
+  "description": " Metachi is a SaaS project management and data analytics web application. My work focuses on building a robust, cross-browser, mobile friendly application with concise data visualization and an optimized user experience. Initially I was entirely front-end focused, but I have since expanded to work on the full stack. Front end work includes writing and testing Angular components in TypeScript, HTML and CSS/SCSS. I do anything from small bugfixes to building entire features. Backend work is still slightly more limited; bugfixing, testing, writing, or refactoring endpoints or small features. ",
   "topics": [
     {
       "title": "Page Display State Service",
