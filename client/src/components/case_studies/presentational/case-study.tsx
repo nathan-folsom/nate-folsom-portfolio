@@ -21,7 +21,7 @@ export function CaseStudy({description, title, topics, url}: CaseStudyProps) {
                 <div className="col-12">
                     <h3 className="text-light">Code Samples</h3>
                 </div>
-                {topics.map(t => <TopicCard title={t.title} subtitle={t.subtitle} url={`/${url}/${t.url}`} key={t.title}/>)}
+                {topics.map(t => <TopicCard title={t.title} subtitle={t.subtitle} url={`./${url}/${t.url}`} key={t.title}/>)}
             </div>
             <div style={{flex: "1 1 auto"}}/>
             <Footer className="text-white px-3"/>

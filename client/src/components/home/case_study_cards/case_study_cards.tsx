@@ -6,17 +6,23 @@ const caseStudies = [
     {
         id: 0,
         title: "Metachi",
-        url: "/metachi",
+        url: "/cs/metachi",
         technologies: "Angular, NgRx, TypeScript, HTML, CSS, Java, Spring",
-        position: "Full Stack Developer",
-        description: "Although my focus is primarily on front-end, I contribute to the whole stack of the web application. I do everything from small bug fixes to implementing new features and APIs."
+        position: "Full Stack Engineer"
+    },
+    {
+        id: 1,
+        title: "Gymbuds",
+        url: "/cs/gymbuds",
+        technologies: "Angular, Apollo, TypeScript, GraphQL, Node, Nestjs",
+        position: "Full Stack Engineer"
     }
 ];
 
 function CaseStudyCard(props: any) {
     const cs = caseStudies[props.id];
     return (
-        <Card className="col-12 cs-card">
+        <Card className="col-12 cs-card mb-3">
             <Card.Body>
                 <Card.Title>{cs.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{cs.position}</Card.Subtitle>

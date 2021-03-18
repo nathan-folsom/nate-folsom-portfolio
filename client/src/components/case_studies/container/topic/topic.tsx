@@ -2,12 +2,11 @@ import CaseStudyHeader from "../../presentational/case_study_header/case_study_h
 import Footer from "../../../commons/footer/footer";
 import React, {useEffect, useState} from "react";
 import {TabPane, Tabs} from "react-bootstrap";
-import { useParams, useRouteMatch } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import {formatCode} from "../../../../utils";
 
 export function Topic() {
-    let {topic} = useParams();
-    let {url} = useRouteMatch();
+    let {caseStudy, topic} = useParams();
     const initialState: {title: string, description: string, tabs: {title: string, description: string, code: {__html: string}}[]} = {
         title: '',
         description: '',
@@ -16,16 +15,16 @@ export function Topic() {
     let [data, setData] = useState(initialState);
 
     useEffect(() => {
-        fetch(`/case_study_content/${getUrl(url)}/topics/${topic}.json`)
+        fetch(`/case_study_content/${caseStudy}/topics/${topic}.json`)
             .then(r => r.json())
             .then(r => {
                 setData({title: r.title, description: r.description, tabs: r.tabs.map(formatTab)});
             })
-    }, [topic, url]);
+    }, [topic, caseStudy]);
 
     const render = () => (
         <div className="container d-flex flex-column px-2 px-md-5">
-            <CaseStudyHeader title={data.title} prev={`${getUrl(url)}`}/>
+            <CaseStudyHeader title={data.title} prev={caseStudy}/>
             <div className="row mx-0 mt-3">
                 <div className="col-12">
                     <p className="text-light">{data.description}</p>
@@ -46,8 +45,6 @@ export function Topic() {
             <Footer className="text-white px-3"/>
         </div>
     )
-
-    const getUrl = (url: string) => url.split('/')[1];
 
     const formatTab = (tab: {title: string, description: string, code: string}) => ({
         title: tab.title, description: tab.description, code: formatCode(tab.code)
