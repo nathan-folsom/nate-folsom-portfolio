@@ -1,6 +1,7 @@
-import React from "react";
+import React, {PropsWithChildren} from "react";
 import {Breadcrumb, Nav, Navbar} from "react-bootstrap";
 import './case_study_header.css';
+import { Link } from "react-router-dom";
 
 interface HeaderProps {
     title: string;
@@ -10,6 +11,8 @@ interface HeaderProps {
 function CaseStudyHeader({title, prev}: HeaderProps) {
 
     const capitalize = prev ? prev?.slice(0, 1).toUpperCase() + prev?.slice(1) : '';
+
+    const Linker = (to: string) => ({children}: PropsWithChildren<any>) => <><Link to={to}>{children}</Link></>;
 
     return (
         <>
@@ -27,8 +30,8 @@ function CaseStudyHeader({title, prev}: HeaderProps) {
                 </Navbar.Collapse>
             </Navbar>
             <Breadcrumb className="mx-3">
-                <Breadcrumb.Item href={"/"}>Home</Breadcrumb.Item>
-                {prev && <Breadcrumb.Item href={`/cs/${prev}`}>{capitalize}</Breadcrumb.Item>}
+                <Breadcrumb.Item linkAs={Linker('/')}>Home</Breadcrumb.Item>
+                {prev && <Breadcrumb.Item linkAs={Linker(`/cs/${prev}`)}>{capitalize}</Breadcrumb.Item>}
                 <Breadcrumb.Item active>{title}</Breadcrumb.Item>
             </Breadcrumb>
         </>

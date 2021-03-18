@@ -1,6 +1,7 @@
 import React from 'react';
 import {Card} from 'react-bootstrap';
 import './case_study_cards.css';
+import { Link } from 'react-router-dom';
 
 const caseStudies = [
     {
@@ -27,7 +28,7 @@ function CaseStudyCard(props: any) {
                 <Card.Title>{cs.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">{cs.position}</Card.Subtitle>
                 <Card.Text>{cs.technologies}</Card.Text>
-                <Card.Link href={cs.url}>Show me some code!</Card.Link>
+                <Link to={cs.url}>Show me some code!</Link>
             </Card.Body>
         </Card>
     )

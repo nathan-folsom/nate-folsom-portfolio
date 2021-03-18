@@ -45,6 +45,15 @@ img {
   overflow-x: scroll;
 }
 
+.exit #case-study {
+  transition: opacity .2s ease;
+  opacity: 1;
+}
+
+.exit-active #case-study {
+  opacity: 0;
+}
+
 @include media-breakpoint-down(sm) {
   h2 {
     font-size: 28px;
