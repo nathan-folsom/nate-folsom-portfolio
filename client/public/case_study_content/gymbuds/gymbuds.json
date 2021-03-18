@@ -1,0 +1,11 @@
+{
+  "title": "Gymbuds",
+  "description": "One of my favorite parts of writing software is the ability to creatively solve problems that I come across in my own life. I’m part of a community of rock climbers who like to meet at the gym, however it can oftentimes be difficult to coordinate, especially with covid restrictions. Gymbuds is my solution: a social webapp that specializes in coordinating gym reservations. In addition to hopefully making something useful, I’m also taking the opportunity to learn some new tech: GraphQL; and solidify my understanding of some key concepts: authentication/authorization and integration testing, for example. This project is still under development and not yet in use, see all the code over on GitHub!",
+  "topics": [
+    {
+      "title": "Reservations System Backend",
+      "url": "reservations-backend",
+      "subtitle": "Server side logic and integration testing"
+    }
+  ]
+}
