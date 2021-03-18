@@ -8,7 +8,7 @@ import {About} from './components/about/about';
 import CaseStudyContainer from './components/case_studies/container/case-study-container/case-study-container';
 
 const routes = [
-    {path: '/', name: 'home', Component: Home},
+    {path: '/', name: 'home', Component: Home, transitionDuration: 400},
     {path: '/cs/:caseStudy', name: 'caseStudy', Component: CaseStudyContainer},
     {path: '/cs/:caseStudy/:topic', name: 'metachi', Component: Topic},
     {path: '/about', name: 'about', Component: About}
@@ -17,12 +17,12 @@ const routes = [
 function App() {
     return (
         <BrowserRouter>
-            {routes.map(({path, Component}) =>
+            {routes.map(({path, Component, transitionDuration}) =>
                 <Route key={path} exact path={path}>
                     {({match}) => (
                         <CSSTransition
                             in={match != null}
-                            timeout={400}
+                            timeout={transitionDuration || 200}
                             unmountOnExit
                         >
                             <Component/>

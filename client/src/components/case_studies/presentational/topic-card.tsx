@@ -1,5 +1,6 @@
 import React from "react";
 import {Card} from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export interface TopicCardProps {
     title: string;
@@ -14,7 +15,7 @@ export function TopicCard({title, url, subtitle}: TopicCardProps) {
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{subtitle}</Card.Text>
-                    <Card.Link href={url}>View</Card.Link>
+                    <Link to={url}>View</Link>
                 </Card.Body>
             </Card>
         </div>
