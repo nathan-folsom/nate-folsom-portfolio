@@ -15,13 +15,13 @@ export function Topic() {
     let [data, setData] = useState(initialState);
 
     useEffect(() => {
-        fetch(`/case_study_content/${caseStudy}/topics/${topic}.json`)
-            .then(r => topic && caseStudy ? r.json() : null)
-            .then(r => {
-                if (r) {
+        if (topic && caseStudy) {
+            fetch(`/case_study_content/${caseStudy}/topics/${topic}.json`)
+                .then(r => r.json())
+                .then(r => {
                     setData({title: r.title, description: r.description, tabs: r.tabs.map(formatTab)});
-                }
-            })
+                })
+        }
     }, [topic, caseStudy]);
 
     const render = () => (
