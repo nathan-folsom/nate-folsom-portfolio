@@ -9,11 +9,16 @@ function CaseStudyContainer() {
     useEffect(() => {
         fetch(`/case_study_content/${caseStudy}/${caseStudy}.json`)
             .then(r => {
-                return r.json();
+                return caseStudy ? r.json() : null;
             })
             .then(t => {
-                setData({title: t.title, description: t.description, topics: t.topics});
-            });
+                if (t) {
+                    setData({title: t.title, description: t.description, topics: t.topics});
+                }
+            })
+            .catch(e => {
+                console.log(e);
+            })
     }, [caseStudy]);
 
     return <CaseStudy title={data.title} description={data.description} topics={data.topics} url={caseStudy || ''}/>
